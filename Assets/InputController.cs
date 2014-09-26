@@ -3,7 +3,7 @@ using System.Collections;
 
 public class InputController : MonoBehaviour {
 
-	public string key = "a";
+	public string key = "A";
 	public int impulse_force = 10;
 
 	private Transform myCorner;
@@ -17,13 +17,12 @@ public class InputController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-				if (Input.GetKeyDown (key)) {
-						if (onGround) {
-								rigidbody.AddForce (Vector3.up * impulse_force, ForceMode.Impulse);
-						}
-				}
+		if (Input.GetButtonDown("Jump " + key) || Input.GetKeyDown (key.ToLower())) {
+			if (onGround) {
+				rigidbody.AddForce (Vector3.up * impulse_force, ForceMode.Impulse);
+			}
 		}
+	}
 
 	void OnCollisionStay(Collision col){
 		Debug.Log (col.gameObject.tag);
