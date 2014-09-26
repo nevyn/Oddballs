@@ -4,6 +4,8 @@ using System.Collections;
 public class InputController : MonoBehaviour {
 
 	public string key = "a";
+	public string rollkey = "q";
+
 	public int impulse_force = 10;
 	
 	private bool onGround=false;
@@ -40,19 +42,31 @@ public class InputController : MonoBehaviour {
 	void Update () {
 
 	
-		if (Input.GetButtonDown("Jump " + key) || Input.GetKeyDown (key.ToLower())) {
-			if (onGround) {
-				SetHighlight(Color.green);
-				rigidbody.AddForce (Vector3.up * impulse_force, ForceMode.Impulse);
-			} else {
-				SetHighlight(Color.red);
-			}
-		}
+				if (Input.GetButtonDown ("Jump " + key) || Input.GetKeyDown (key.ToLower ())) {
+						if (onGround) {
+								SetHighlight (Color.green);
+								rigidbody.AddForce (Vector3.up * impulse_force, ForceMode.Impulse);
+						} else {
+								SetHighlight (Color.red);
+						}
+				}
 
-		if(Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ())) {
-			SetHighlight(Color.white);
+				if (Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ())) {
+						SetHighlight (Color.white);
+				}
+
+				if (Input.GetKeyDown (rollkey.ToLower ())) {
+						if (onGround) {
+								SetHighlight (Color.blue);
+				rigidbody.AddTorque (torqueVector(myCorner, allCorners) * impulse_force, ForceMode.Impulse);
+
+						} 
+						else {
+								SetHighlight (Color.red);
+						}
+
+				}
 		}
-	}
 
 	void SetHighlight(Color highlightColor) {
 		Color newColor = highlightColor;
@@ -92,5 +106,11 @@ public class InputController : MonoBehaviour {
 		return myCorner;
 	}
 
-}
+	Vector3 torqueVector(Vector3 mypoint, Vector3[] vertices) {
+			Vector3[] groundcorners = new Vector3[2];
+			for (int i=0; i<vertices.Length; i++) {
 
+		}
+		return mypoint;
+}
+}
