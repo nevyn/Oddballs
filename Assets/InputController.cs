@@ -5,32 +5,35 @@ public class InputController : MonoBehaviour {
 
 	public string key = "a";
 	public int impulse_force = 10;
+	
+	private bool onGround=false;
 
 	private Vector3 myCorner;
 
-	private bool onGround=false;
-
-	private GameObject[] myPals;
+	private Vector3[] allCorners = new Vector3[4];
+	private	GameObject[] allKitties = new GameObject[4];
 
 	// Use this for initialization
 	void Start () {
 
-		myPals = GameObject.FindGameObjectsWithTag("Kitty"); 
-				Transform tetra = transform.parent;
-				Mesh mesh = tetra.GetComponent<MeshFilter> ().mesh;
+		Transform tetra = transform.parent;
+		Mesh mesh = tetra.GetComponent<MeshFilter> ().mesh;
 
-				Vector3[] vertices = mesh.vertices;
-			
-				myCorner = vertices [0];
-				for (var i = 1; i < vertices.Length; i++) {
+		Vector3[] vertices = mesh.vertices;
 
-						float dist1 = (myCorner - transform.position).magnitude;
-						float dist2 = (vertices [i] - transform.position).magnitude;
-						if (dist2 > dist1) {
-								myCorner = vertices [i];
-						}
-		
-				}
+		allKitties = GameObject.FindGameObjectsWithTag("Kitty"); 
+
+		for (int i =0; i< allKitties.Length; i++) {
+			Debug.Log (i);
+			allCorners[i] = getClosestCorner(allKitties[i].transform.position, vertices);
+		}
+
+		myCorner = getClosestCorner(transform.position, vertices);
+	
+	
+		for(int i=0; i<allKitties.Length; i++) {
+			Debug.Log ("Pals:" + i +  allKitties[i].transform.position.x + " " +  allKitties[i].transform.position.y + " " +  allKitties[i].transform.position.z) ;
+		}	           
 //				Debug.Log ("myCorner" + myCorner.x + myCorner.y + myCorner.z);
 		}
 	// Update is called once per frame
@@ -72,8 +75,22 @@ public class InputController : MonoBehaviour {
 						onGround = false;
 			Debug.Log (onGround);
 				}
+					
+		}    
+	
+	Vector3 getClosestCorner(Vector3 mypoint, Vector3[] vertices) {
+		Vector3 myCorner=vertices[0];
 
-			
-		}           
+		for (var i = 1; i < vertices.Length; i++) {
+	
+			float dist1 = (myCorner - mypoint).magnitude;
+			float dist2 = (vertices [i] - mypoint).magnitude;
+			if (dist2 > dist1) {
+				myCorner = vertices [i];
+			}
+		}
+		return myCorner;
+	}
+
 }
 
