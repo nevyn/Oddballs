@@ -15,8 +15,7 @@ public class InputController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		myPals = gameObject.GetComponentsInParent(typeof(Kitty));
-
+		myPals = GameObject.FindGameObjectsWithTag("Kitty"); 
 				Transform tetra = transform.parent;
 				Mesh mesh = tetra.GetComponent<MeshFilter> ().mesh;
 
@@ -36,7 +35,6 @@ public class InputController : MonoBehaviour {
 		}
 	// Update is called once per frame
 	void Update () {
-<<<<<<< HEAD
 
 				if (Input.GetKeyDown (key)) {
 						if (onGround) {
@@ -44,8 +42,8 @@ public class InputController : MonoBehaviour {
 								rigidbody.AddForce (Vector3.up * impulse_force, ForceMode.Impulse);
 						}
 				}
-		}
-=======
+
+	
 		if (Input.GetButtonDown("Jump " + key) || Input.GetKeyDown (key.ToLower())) {
 			if (onGround) {
 				SetHighlight(Color.green);
@@ -67,7 +65,6 @@ public class InputController : MonoBehaviour {
 		newMaterial.color = newColor;
 		gameObjectRenderer.material = newMaterial ;
 	}
->>>>>>> FETCH_HEAD
 
 	void OnCollisionStay(Collision col){
 		Debug.Log (col.gameObject.tag);
