@@ -19,9 +19,24 @@ public class InputController : MonoBehaviour {
 	void Update () {
 		if (Input.GetButtonDown("Jump " + key) || Input.GetKeyDown (key.ToLower())) {
 			if (onGround) {
+				SetHighlight(Color.green);
 				rigidbody.AddForce (Vector3.up * impulse_force, ForceMode.Impulse);
+			} else {
+				SetHighlight(Color.red);
 			}
 		}
+
+		if(Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ())) {
+			SetHighlight(Color.white);
+		}
+	}
+
+	void SetHighlight(Color highlightColor) {
+		Color newColor = highlightColor;
+		MeshRenderer gameObjectRenderer = GetComponent<MeshRenderer>();
+		Material newMaterial = new Material(gameObjectRenderer.material);
+		newMaterial.color = newColor;
+		gameObjectRenderer.material = newMaterial ;
 	}
 
 	void OnCollisionStay(Collision col){
