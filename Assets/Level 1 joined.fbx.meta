@@ -1,0 +1,236 @@
+fileFormatVersion: 2
+guid: a723569388c694ab3b362c8a5c8f2e91
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Box 1
+    100002: Box 1.001
+    100004: Box 1.002
+    100006: Box 1.003
+    100008: Box 1.004
+    100010: Box 1.005
+    100012: Box 1.006
+    100014: Box 1.007
+    100016: Box 1.008
+    100018: Box 1.009
+    100020: Box 1.010
+    100022: Box 1.011
+    100024: Box 1.012
+    100026: Box 1.013
+    100028: Camera
+    100030: Cube
+    100032: Cube.001
+    100034: Cube.002
+    100036: Cube.003
+    100038: Cube.004
+    100040: Cube.005
+    100042: Cube.006
+    100044: Cube.007
+    100046: Cylinder
+    100048: Fence
+    100050: Fence.001
+    100052: Fence.002
+    100054: Fence.003
+    100056: Fence.004
+    100058: Fence.005
+    100060: Fence.006
+    100062: Fence.007
+    100064: //RootNode
+    100066: MESH
+    100068: Plane
+    100070: Sun
+    100072: Wall.001
+    400000: Box 1
+    400002: Box 1.001
+    400004: Box 1.002
+    400006: Box 1.003
+    400008: Box 1.004
+    400010: Box 1.005
+    400012: Box 1.006
+    400014: Box 1.007
+    400016: Box 1.008
+    400018: Box 1.009
+    400020: Box 1.010
+    400022: Box 1.011
+    400024: Box 1.012
+    400026: Box 1.013
+    400028: Camera
+    400030: Cube
+    400032: Cube.001
+    400034: Cube.002
+    400036: Cube.003
+    400038: Cube.004
+    400040: Cube.005
+    400042: Cube.006
+    400044: Cube.007
+    400046: Cylinder
+    400048: Fence
+    400050: Fence.001
+    400052: Fence.002
+    400054: Fence.003
+    400056: Fence.004
+    400058: Fence.005
+    400060: Fence.006
+    400062: Fence.007
+    400064: //RootNode
+    400066: MESH
+    400068: Plane
+    400070: Sun
+    400072: Wall.001
+    2300000: Box 1
+    2300002: Box 1.001
+    2300004: Box 1.002
+    2300006: Box 1.003
+    2300008: Box 1.004
+    2300010: Box 1.005
+    2300012: Box 1.006
+    2300014: Box 1.007
+    2300016: Box 1.008
+    2300018: Box 1.009
+    2300020: Box 1.010
+    2300022: Box 1.011
+    2300024: Box 1.012
+    2300026: Box 1.013
+    2300028: Cube
+    2300030: Cube.001
+    2300032: Cube.002
+    2300034: Cube.003
+    2300036: Cube.004
+    2300038: Cube.005
+    2300040: Cube.006
+    2300042: Cube.007
+    2300044: Cylinder
+    2300046: Fence
+    2300048: Fence.001
+    2300050: Fence.002
+    2300052: Fence.003
+    2300054: Fence.004
+    2300056: Fence.005
+    2300058: Fence.006
+    2300060: Fence.007
+    2300062: MESH
+    2300064: Plane
+    2300066: Wall.001
+    3300000: Box 1
+    3300002: Box 1.001
+    3300004: Box 1.002
+    3300006: Box 1.003
+    3300008: Box 1.004
+    3300010: Box 1.005
+    3300012: Box 1.006
+    3300014: Box 1.007
+    3300016: Box 1.008
+    3300018: Box 1.009
+    3300020: Box 1.010
+    3300022: Box 1.011
+    3300024: Box 1.012
+    3300026: Box 1.013
+    3300028: Cube
+    3300030: Cube.001
+    3300032: Cube.002
+    3300034: Cube.003
+    3300036: Cube.004
+    3300038: Cube.005
+    3300040: Cube.006
+    3300042: Cube.007
+    3300044: Cylinder
+    3300046: Fence
+    3300048: Fence.001
+    3300050: Fence.002
+    3300052: Fence.003
+    3300054: Fence.004
+    3300056: Fence.005
+    3300058: Fence.006
+    3300060: Fence.007
+    3300062: MESH
+    3300064: Plane
+    3300066: Wall.001
+    4300000: MESH
+    4300002: Cube.007
+    4300004: Cube.006
+    4300006: Cube.005
+    4300008: Cube.004
+    4300010: Cube.003
+    4300012: Cube.002
+    4300014: Cube.001
+    4300016: Cube
+    4300018: Box 1.013
+    4300020: Box 1.012
+    4300022: Box 1.011
+    4300024: Box 1.010
+    4300026: Box 1.009
+    4300028: Box 1.008
+    4300030: Box 1.007
+    4300032: Box 1.006
+    4300034: Fence.007
+    4300036: Fence.006
+    4300038: Fence.005
+    4300040: Fence.001
+    4300042: Box 1.005
+    4300044: Box 1.004
+    4300046: Box 1.003
+    4300048: Box 1.002
+    4300050: Box 1.001
+    4300052: Box 1
+    4300054: Cylinder
+    4300056: Wall.001
+    4300058: Fence.004
+    4300060: Fence.003
+    4300062: Fence.002
+    4300064: Fence
+    4300066: Plane
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
