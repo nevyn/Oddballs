@@ -3,8 +3,8 @@ using System.Collections;
 
 public class SpringAdjustment : MonoBehaviour {
 
-	public int damp = 1000;
-	public int springy = 500;
+	public int damp = 10000;
+	public int springy = 5000;
 
 	// Use this for initialization
 	void Start () {
@@ -33,7 +33,7 @@ public class SpringAdjustment : MonoBehaviour {
 				}
 
 
-			SpringJoint[] springs = FindObjectsOfType(typeof(SpringJoint)) as SpringJoint[];
+		SpringJoint[] springs = FindObjectsOfType(typeof(SpringJoint)) as SpringJoint[];
 			foreach (SpringJoint s in springs) {
 				s.damper = damp;
 				s.spring = springy;
