@@ -67,6 +67,7 @@ ModelImporter:
     100122: transform7
     100124: transform8
     100126: transform9
+    100128: Cat
     400000: //RootNode
     400002: pCube1
     400004: pCube2
@@ -131,9 +132,14 @@ ModelImporter:
     400122: transform7
     400124: transform8
     400126: transform9
+    400128: Cat
     2300000: polySurface8
+    2300002: Cat
     3300000: polySurface8
+    3300002: Cat
     4300000: polySurface8
+    4300002: Cat
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -150,7 +156,161 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cat
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform12
+        weight: 1
+      - path: pCube2
+        weight: 1
+      - path: pCube2/transform13
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      - path: polySurface1/polySurface8
+        weight: 1
+      - path: polySurface1/polySurface8/transform31
+        weight: 1
+      - path: polySurface1/polySurface9
+        weight: 1
+      - path: polySurface1/polySurface9/transform30
+        weight: 1
+      - path: polySurface1/polySurface10
+        weight: 1
+      - path: polySurface1/polySurface10/transform29
+        weight: 1
+      - path: polySurface1/polySurface11
+        weight: 1
+      - path: polySurface1/polySurface11/transform28
+        weight: 1
+      - path: polySurface1/polySurface12
+        weight: 1
+      - path: polySurface1/polySurface12/transform27
+        weight: 1
+      - path: polySurface1/polySurface13
+        weight: 1
+      - path: polySurface1/polySurface13/transform26
+        weight: 1
+      - path: polySurface1/polySurface14
+        weight: 1
+      - path: polySurface1/polySurface14/transform25
+        weight: 1
+      - path: polySurface1/polySurface15
+        weight: 1
+      - path: polySurface1/polySurface15/transform24
+        weight: 1
+      - path: polySurface1/polySurface16
+        weight: 1
+      - path: polySurface1/polySurface16/transform23
+        weight: 1
+      - path: polySurface1/polySurface17
+        weight: 1
+      - path: polySurface1/polySurface17/transform22
+        weight: 1
+      - path: polySurface1/polySurface18
+        weight: 1
+      - path: polySurface1/polySurface18/transform21
+        weight: 1
+      - path: polySurface1/transform20
+        weight: 1
+      - path: pPrism1
+        weight: 1
+      - path: pPrism1/transform11
+        weight: 1
+      - path: pPrism2
+        weight: 1
+      - path: pPrism2/transform8
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: pSphere1/transform6
+        weight: 1
+      - path: pSphere2
+        weight: 1
+      - path: pSphere2/transform5
+        weight: 1
+      - path: pSphere3
+        weight: 1
+      - path: pSphere3/transform4
+        weight: 1
+      - path: pSphere4
+        weight: 1
+      - path: pSphere4/transform3
+        weight: 1
+      - path: pSphere5
+        weight: 1
+      - path: pSphere5/transform2
+        weight: 1
+      - path: pSphere6
+        weight: 1
+      - path: pSphere6/transform1
+        weight: 1
+      - path: pSphere7
+        weight: 1
+      - path: pSphere7/polySurface1 1
+        weight: 1
+      - path: pSphere7/polySurface1 1/transform19
+        weight: 1
+      - path: pSphere7/polySurface2
+        weight: 1
+      - path: pSphere7/polySurface2/transform18
+        weight: 1
+      - path: pSphere7/polySurface4
+        weight: 1
+      - path: pSphere7/polySurface4/transform17
+        weight: 1
+      - path: pSphere7/polySurface5
+        weight: 1
+      - path: pSphere7/polySurface5/transform16
+        weight: 1
+      - path: pSphere7/polySurface6
+        weight: 1
+      - path: pSphere7/polySurface6/transform15
+        weight: 1
+      - path: pSphere7/polySurface7
+        weight: 1
+      - path: pSphere7/polySurface7/transform14
+        weight: 1
+      - path: pSphere7/transform7
+        weight: 1
+      - path: pSphere8
+        weight: 1
+      - path: pSphere8/transform10
+        weight: 1
+      - path: pSphere9
+        weight: 1
+      - path: pSphere9/transform9
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []

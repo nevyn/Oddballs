@@ -17147,6 +17147,7 @@ GameObject:
   - 33: {fileID: 610790867}
   - 135: {fileID: 610790866}
   - 138: {fileID: 610790870}
+  - 95: {fileID: 610790874}
   - 82: {fileID: 610790873}
   m_Layer: 8
   m_Name: Kitty2
@@ -17315,6 +17316,22 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!95 &610790874
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 4784f4934d0ff4b02aad3ccfc194c61d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2081545450}
+  m_GameObject: {fileID: 610790865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ceb64e32c7bf94a64a738085e665b070, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5449bc285bc5e40e98e82b1ace486866, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &610835423
 GameObject:
   m_ObjectHideFlags: 0
@@ -19097,6 +19114,7 @@ GameObject:
   - 33: {fileID: 693370329}
   - 135: {fileID: 693370328}
   - 138: {fileID: 693370332}
+  - 95: {fileID: 693370335}
   - 82: {fileID: 693370334}
   m_Layer: 8
   m_Name: Kitty1
@@ -19265,6 +19283,22 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!95 &693370335
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 4784f4934d0ff4b02aad3ccfc194c61d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1599076868}
+  m_GameObject: {fileID: 693370326}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ceb64e32c7bf94a64a738085e665b070, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5449bc285bc5e40e98e82b1ace486866, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &695764911
 GameObject:
   m_ObjectHideFlags: 0
@@ -39858,6 +39892,7 @@ GameObject:
   - 33: {fileID: 1532468445}
   - 135: {fileID: 1532468444}
   - 138: {fileID: 1532468448}
+  - 95: {fileID: 1532468451}
   - 82: {fileID: 1532468450}
   m_Layer: 8
   m_Name: Kitty3
@@ -39898,7 +39933,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 711899083}
   m_GameObject: {fileID: 1532468442}
-  m_Mesh: {fileID: 4300000, guid: ceb64e32c7bf94a64a738085e665b070, type: 3}
+  m_Mesh: {fileID: 4300002, guid: ceb64e32c7bf94a64a738085e665b070, type: 3}
 --- !u!23 &1532468446
 Renderer:
   m_ObjectHideFlags: 0
@@ -40026,6 +40061,22 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!95 &1532468451
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 4784f4934d0ff4b02aad3ccfc194c61d,
+    type: 2}
+  m_PrefabInternal: {fileID: 711899083}
+  m_GameObject: {fileID: 1532468442}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ceb64e32c7bf94a64a738085e665b070, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5449bc285bc5e40e98e82b1ace486866, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1534084666
 GameObject:
   m_ObjectHideFlags: 0
@@ -53822,6 +53873,7 @@ GameObject:
   - 33: {fileID: 2078852732}
   - 135: {fileID: 2078852731}
   - 138: {fileID: 2078852735}
+  - 95: {fileID: 2078852738}
   - 82: {fileID: 2078852737}
   m_Layer: 8
   m_Name: Kitty4
@@ -53990,6 +54042,22 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!95 &2078852738
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 4784f4934d0ff4b02aad3ccfc194c61d,
+    type: 2}
+  m_PrefabInternal: {fileID: 644864041}
+  m_GameObject: {fileID: 2078852729}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ceb64e32c7bf94a64a738085e665b070, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5449bc285bc5e40e98e82b1ace486866, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2080193229
 GameObject:
   m_ObjectHideFlags: 0
