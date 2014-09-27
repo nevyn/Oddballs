@@ -151,7 +151,6 @@ public class InputController : MonoBehaviour {
 
 	void OnCollisionStay(Collision col){
 
-
 				if (col.gameObject.tag == "Ground") {
 						onGround = true;
 			SetHighlight (Color.yellow);
