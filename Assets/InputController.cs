@@ -7,6 +7,7 @@ public class InputController : MonoBehaviour {
 	public string rollkey = "q";
 
 	public int impulse_force = 15;
+	public float upforce = 0.5f;
 
 	public int springDamper = 20;
 	public int springForce = 500;
@@ -87,9 +88,8 @@ public class InputController : MonoBehaviour {
 			else if (onGround) {
 					SetHighlight (Color.green);
 
-								Vector3 push = (transform.parent.localPosition.normalized+Vector3.up);
-								Debug.DrawRay (transform.localPosition, transform.parent.localPosition, Color.red);
-								Debug.Log (transform.parent.position);
+								Vector3 push = ((transform.parent.position - transform.position).normalized+(Vector3.up * upforce ));
+								Debug.Log (push);
 
 								//+ transform.parent.position;
 								rigidbody.AddForce(push * impulse_force, ForceMode.Impulse);

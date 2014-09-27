@@ -1,13 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/InputController.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets/InputController.cs" Line="78" Column="3" />
-=======
-      <File FileName="Assets/InputController.cs" Line="25" Column="1" />
-      <File FileName="Assets/CameraController.cs" Line="14" Column="67" />
->>>>>>> FETCH_HEAD
+      <File FileName="Assets/InputController.cs" Line="91" Column="72" />
+      <File FileName="Assets/SpringAdjustment.cs" Line="40" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
