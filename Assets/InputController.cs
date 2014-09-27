@@ -65,11 +65,11 @@ public class InputController : MonoBehaviour {
 
 						if (ic.onGround) {
 								numtouching += 1;
-				Debug.Log ("all touching");
+			
 
 				if (ic.bdown) {
 								simpress+=1;
-					Debug.Log ("all touching && pressing");
+
 
 				}
 				}
@@ -89,7 +89,7 @@ public class InputController : MonoBehaviour {
 					SetHighlight (Color.green);
 
 								Vector3 push = ((transform.parent.position - transform.position).normalized+(Vector3.up * upforce ));
-								Debug.Log (push);
+								
 
 								//+ transform.parent.position;
 								rigidbody.AddForce(push * impulse_force, ForceMode.Impulse);
@@ -116,7 +116,7 @@ public class InputController : MonoBehaviour {
 	}
 
 	void OnCollisionStay(Collision col){
-		Debug.Log (col.gameObject.tag);
+
 
 				if (col.gameObject.tag == "Ground") {
 						onGround = true;
