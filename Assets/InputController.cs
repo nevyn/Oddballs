@@ -103,7 +103,7 @@ public class InputController : MonoBehaviour {
 				canfly=true;
 
 				rigidbody.AddForce ((Vector3.up*impulse_force*0.8f)+fwd*impulse_force*0.2f, ForceMode.Impulse);
-	
+				GetComponent<Animator>().SetBool("Jumping", true);
 				Debug.Log ("actually big jump");
 				Debug.DrawRay(transform.parent.position, fwd, Color.green);
 
@@ -114,13 +114,14 @@ public class InputController : MonoBehaviour {
 				canfly=false;
 				
 				rigidbody.AddForce ((Vector3.up*impulse_force*0.8f)+fwd*impulse_force*0.2f, ForceMode.Impulse);
-				
+				GetComponent<Animator>().SetBool("Jumping", true);
 				Debug.Log ("actually big jump");
 				Debug.DrawRay(transform.parent.position, fwd, Color.grey);
 			}
 
 			else if (onGround) {
 					SetHighlight (Color.green);
+				GetComponent<Animator>().SetBool("Jumping", true);
 
 								Vector3 push = ((transform.parent.position - transform.position).normalized+(Vector3.up * upforce ));
 								
@@ -151,9 +152,9 @@ public class InputController : MonoBehaviour {
 
 	void OnCollisionStay(Collision col){
 
-
 				if (col.gameObject.tag == "Ground") {
 						onGround = true;
+						GetComponent<Animator>().SetBool("Jumping", false);
 			SetHighlight (Color.yellow);
 				}
 		}

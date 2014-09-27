@@ -14,6 +14,8 @@ GameObject:
   - 33: {fileID: 3300000}
   - 135: {fileID: 13500000}
   - 138: {fileID: 13800000}
+  - 95: {fileID: 9500000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Kitty
   m_TagString: Kitty
@@ -59,7 +61,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mesh: {fileID: 4300000, guid: ceb64e32c7bf94a64a738085e665b070, type: 3}
+  m_Mesh: {fileID: 4300002, guid: ceb64e32c7bf94a64a738085e665b070, type: 3}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -75,6 +77,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ceb64e32c7bf94a64a738085e665b070, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5449bc285bc5e40e98e82b1ace486866, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,6 +111,18 @@ MonoBehaviour:
   springForce: 500
   onGround: 0
   bdown: 0
+  canfly: 1
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778f99e91cc6e4b8184e087b42851884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -105,7 +134,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .0453217216
-  m_Center: {x: .00232185982, y: .0451725312, z: -.0106882509}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!138 &13800000
 FixedJoint:
   m_ObjectHideFlags: 1
