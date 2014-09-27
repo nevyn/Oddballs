@@ -2,16 +2,17 @@
 using System.Collections;
 
 public class InputController : MonoBehaviour {
-
+	
 	public string key = "a";
 	public string rollkey = "q";
 
-	public int impulse_force = 10;
+	public int impulse_force = 15;
 
 	public int springDamper = 20;
 	public int springForce = 500;
 
-	private bool onGround=false;
+	public bool onGround = false;
+	public bool bdown = false;
 
 	private Vector3 myCorner;
 	private int[][] mySides;
@@ -53,20 +54,47 @@ public class InputController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
-				if (Input.GetButtonDown ("Jump " + key) || Input.GetKeyDown (key.ToLower ())) {
-						if (onGround) {
-								SetHighlight (Color.green);
 
-								Vector3 push = (Vector3.up + transform.parent.localPosition.normalized);
-								Debug.DrawRay (transform.parent.position, push, Color.red);
+	
+		int numtouching = 0;
+		int simpress = 0;
+			for (int i = 0; i< allKitties.Length; i++) {
+
+			InputController ic = allKitties[i].GetComponent<InputController>();
+
+						if (ic.onGround) {
+								numtouching += 1;
+				Debug.Log ("all touching");
+
+				if (ic.bdown) {
+								simpress+=1;
+					Debug.Log ("all touching && pressing");
+
+				}
+				}
+				
+				}
+
+	
+		if (Input.GetButtonDown ("Jump " + key) || Input.GetKeyDown (key.ToLower ())) {
+
+			bdown = true;
+
+			if ( simpress == 3) {
+				rigidbody.AddForce (Vector3.up * impulse_force*50, ForceMode.Impulse);
+			}
+
+			else if (onGround) {
+					SetHighlight (Color.green);
+
+								Vector3 push = (transform.parent.localPosition.normalized+Vector3.up);
+								Debug.DrawRay (transform.localPosition, transform.parent.localPosition, Color.red);
 								Debug.Log (transform.parent.position);
 
 								//+ transform.parent.position;
-								rigidbody.AddForce(Vector3.up * impulse_force, ForceMode.Impulse);
+								rigidbody.AddForce(push * impulse_force, ForceMode.Impulse);
 								
 								GetComponent<AudioSource>().Play();
-								rigidbody.AddForce (Vector3.up * impulse_force, ForceMode.Impulse);
 						} else {
 								SetHighlight (Color.red);
 						}
@@ -74,6 +102,7 @@ public class InputController : MonoBehaviour {
 
 				if (Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ()) || Input.GetKeyUp (rollkey.ToLower ())) {
 						SetHighlight (onGround ? Color.yellow : Color.white);
+						bdown = false;
 				}
 
 		}
@@ -115,5 +144,9 @@ public class InputController : MonoBehaviour {
 		}
 		return myCorner;
 	}
+
+	public bool groundCheck() {
+	return onGround;
+}
 	
 }
