@@ -11,6 +11,7 @@ public class InputController : MonoBehaviour {
 	private bool onGround=false;
 
 	private Vector3 myCorner;
+	private int[][] mySides;
 
 	private Vector3[] allCorners = new Vector3[4];
 	private	GameObject[] allKitties = new GameObject[4];
@@ -18,9 +19,16 @@ public class InputController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+
 		Transform tetra = transform.parent;
 		Mesh mesh = tetra.GetComponent<MeshFilter> ().mesh;
 
+		SortedList mySides = new SortedList ();
+/*		mySides.Add( 1, {{Kitty4,Kitty2}, {Kitty3,Kitty4}, {Kitty2,Kitty3}});
+		mySides.Add( 2, {{Kitty1,Kitty4}, {Kitty3,Kitty1}, {Kitty4,Kitty3}});
+		mySides.Add( 3, {{Kitty4,Kitty1}, {Kitty1,Kitty2}, {Kitty2,Kitty4}});
+		mySides.Add( 4, {{Kitty2,Kitty1}, {Kitty1,Kitty3}, {Kitty3,Kitty2}});
+*/
 		Vector3[] vertices = mesh.vertices;
 
 		allKitties = GameObject.FindGameObjectsWithTag("Kitty"); 
@@ -51,21 +59,26 @@ public class InputController : MonoBehaviour {
 						}
 				}
 
-				if (Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ())) {
+				if (Input.GetKeyDown (rollkey.ToLower ())) {
+						if (onGround) {
+							SetHighlight (Color.blue);
+
+				
+							Debug.Log(transform.parent.localRotation);
+
+//							Vector3 torqueVector = calcTorqueVector(myCorner, allCorners);
+//							rigidbody.AddTorque (torqueVector, ForceMode.Impulse);
+						} 
+						else {
+							SetHighlight (Color.red);
+						}
+			
+				}
+
+				if (Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ()) || Input.GetKeyUp (rollkey.ToLower ())) {
 						SetHighlight (Color.white);
 				}
 
-				if (Input.GetKeyDown (rollkey.ToLower ())) {
-						if (onGround) {
-								SetHighlight (Color.blue);
-				rigidbody.AddTorque (torqueVector(myCorner, allCorners) * impulse_force, ForceMode.Impulse);
-
-						} 
-						else {
-								SetHighlight (Color.red);
-						}
-
-				}
 		}
 
 	void SetHighlight(Color highlightColor) {
@@ -106,11 +119,25 @@ public class InputController : MonoBehaviour {
 		return myCorner;
 	}
 
-	Vector3 torqueVector(Vector3 mypoint, Vector3[] vertices) {
-			Vector3[] groundcorners = new Vector3[2];
-			for (int i=0; i<vertices.Length; i++) {
+/*	Vector3 calcTorqueVector(Vector3 mypoint, Vector3[] vertices) {
+		float[] ypos = new float[4];
+		for (int i=0; i<vertices.Length; i++) {
+						ypos [i] = vertices.y + Transform.y;
+				}
 
+		for (int i =0; i< allKitties.Length; i++) {
+			Debug.Log (i);
+			Debug.Log(GetParentComponent.
+			base[i] = getBase(allKitties[i].transform.position, vertices);
 		}
-		return mypoint;
-}
+
+			Vector3[] groundcorners = new Vector3[2];
+			int index = 0;
+			for (int i=0; i<vertices.Length; i++) {
+				if ((!vertices[i].y-mypoint.y <= 0,01)) {
+					Debug.Log("y: " + groundcorners.y);
+				}
+			}
+			return mypoint;
+		}*/
 }
