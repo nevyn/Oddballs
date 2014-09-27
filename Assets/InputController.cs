@@ -83,13 +83,6 @@ public class InputController : MonoBehaviour {
 
 				}	
 	
-		if (Input.GetKeyDown(KeyCode.Space)){
-			Debug.Log ("SPACE");
-
-			simpress=3;
-
-		}
-
 		if (Input.GetButtonDown ("Jump " + key) || Input.GetKeyDown (key.ToLower ())) {
 
 			bdown = true;
@@ -102,7 +95,7 @@ public class InputController : MonoBehaviour {
 
 				canfly=true;
 
-				rigidbody.AddForce ((Vector3.up*impulse_force*0.8f)+fwd*impulse_force*0.2f, ForceMode.Impulse);
+				rigidbody.AddForce ((Vector3.up*impulse_force*0.9f)+fwd*impulse_force*0.3f, ForceMode.Impulse);
 				GetComponent<Animator>().SetBool("Jumping", true);
 				Debug.Log ("actually big jump");
 				Debug.DrawRay(transform.parent.position, fwd, Color.green);
@@ -113,7 +106,7 @@ public class InputController : MonoBehaviour {
 				
 				canfly=false;
 				
-				rigidbody.AddForce ((Vector3.up*impulse_force*0.8f)+fwd*impulse_force*0.2f, ForceMode.Impulse);
+				rigidbody.AddForce ((Vector3.up*impulse_force*0.9f)+fwd*impulse_force*0.3f, ForceMode.Impulse);
 				GetComponent<Animator>().SetBool("Jumping", true);
 				Debug.Log ("actually big jump");
 				Debug.DrawRay(transform.parent.position, fwd, Color.grey);
