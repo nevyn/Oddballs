@@ -7,24 +7,33 @@ public class InputController : MonoBehaviour {
 	public string rollkey = "q";
 
 	public int impulse_force = 10;
-	
+
+	public int springDamper = 20;
+	public int springForce = 500;
+
 	private bool onGround=false;
 
 	private Vector3 myCorner;
 	private int[][] mySides;
 
+	private SpringJoint[] myJoints;
 	private Vector3[] allCorners = new Vector3[4];
 	private	GameObject[] allKitties = new GameObject[4];
 
 	// Use this for initialization
 	void Start () {
 
+		myJoints = GetComponents<SpringJoint>();
+		foreach (SpringJoint j in myJoints) {
+						j.spring = springForce;
+						j.damper = springDamper;
+				}
 
 		Transform tetra = transform.parent;
 		Mesh mesh = tetra.GetComponent<MeshFilter> ().mesh;
 
-		SortedList mySides = new SortedList ();
-/*		mySides.Add( 1, {{Kitty4,Kitty2}, {Kitty3,Kitty4}, {Kitty2,Kitty3}});
+		/*		SortedList mySides = new SortedList ();
+		mySides.Add( 1, {{Kitty4,Kitty2}, {Kitty3,Kitty4}, {Kitty2,Kitty3}});
 		mySides.Add( 2, {{Kitty1,Kitty4}, {Kitty3,Kitty1}, {Kitty4,Kitty3}});
 		mySides.Add( 3, {{Kitty4,Kitty1}, {Kitty1,Kitty2}, {Kitty2,Kitty4}});
 		mySides.Add( 4, {{Kitty2,Kitty1}, {Kitty1,Kitty3}, {Kitty3,Kitty2}});
@@ -46,34 +55,27 @@ public class InputController : MonoBehaviour {
 		}	           
 //				Debug.Log ("myCorner" + myCorner.x + myCorner.y + myCorner.z);
 		}
+
+
 	// Update is called once per frame
 	void Update () {
-
 	
 				if (Input.GetButtonDown ("Jump " + key) || Input.GetKeyDown (key.ToLower ())) {
 						if (onGround) {
 								SetHighlight (Color.green);
-								rigidbody.AddForce (Vector3.up * impulse_force, ForceMode.Impulse);
+								Vector3 push = (Vector3.up + transform.parent.localPosition.normalized);
+				Debug.DrawRay (transform.parent.position, push, Color.red);
+				Debug.Log (transform.parent.position);
+
+							//+ transform.parent.position;
+							rigidbody.AddForce(push * impulse_force, ForceMode.Impulse);
+								
 						} else {
 								SetHighlight (Color.red);
 						}
 				}
 
-				if (Input.GetKeyDown (rollkey.ToLower ())) {
-						if (onGround) {
-							SetHighlight (Color.blue);
 
-				
-							Debug.Log(transform.parent.localRotation);
-
-//							Vector3 torqueVector = calcTorqueVector(myCorner, allCorners);
-//							rigidbody.AddTorque (torqueVector, ForceMode.Impulse);
-						} 
-						else {
-							SetHighlight (Color.red);
-						}
-			
-				}
 
 				if (Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ()) || Input.GetKeyUp (rollkey.ToLower ())) {
 						SetHighlight (Color.white);
@@ -126,8 +128,6 @@ public class InputController : MonoBehaviour {
 				}
 
 		for (int i =0; i< allKitties.Length; i++) {
-			Debug.Log (i);
-			Debug.Log(GetParentComponent.
 			base[i] = getBase(allKitties[i].transform.position, vertices);
 		}
 
