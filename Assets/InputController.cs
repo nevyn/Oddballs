@@ -32,12 +32,6 @@ public class InputController : MonoBehaviour {
 		Transform tetra = transform.parent;
 		Mesh mesh = tetra.GetComponent<MeshFilter> ().mesh;
 
-		/*		SortedList mySides = new SortedList ();
-		mySides.Add( 1, {{Kitty4,Kitty2}, {Kitty3,Kitty4}, {Kitty2,Kitty3}});
-		mySides.Add( 2, {{Kitty1,Kitty4}, {Kitty3,Kitty1}, {Kitty4,Kitty3}});
-		mySides.Add( 3, {{Kitty4,Kitty1}, {Kitty1,Kitty2}, {Kitty2,Kitty4}});
-		mySides.Add( 4, {{Kitty2,Kitty1}, {Kitty1,Kitty3}, {Kitty3,Kitty2}});
-*/
 		Vector3[] vertices = mesh.vertices;
 
 		allKitties = GameObject.FindGameObjectsWithTag("Kitty"); 
@@ -65,11 +59,11 @@ public class InputController : MonoBehaviour {
 								SetHighlight (Color.green);
 
 								Vector3 push = (Vector3.up + transform.parent.localPosition.normalized);
-				Debug.DrawRay (transform.parent.position, push, Color.red);
-				Debug.Log (transform.parent.position);
+								Debug.DrawRay (transform.parent.position, push, Color.red);
+								Debug.Log (transform.parent.position);
 
-							//+ transform.parent.position;
-							rigidbody.AddForce(push * impulse_force, ForceMode.Impulse);
+								//+ transform.parent.position;
+								rigidbody.AddForce(Vector3.up * impulse_force, ForceMode.Impulse);
 								
 								GetComponent<AudioSource>().Play();
 								rigidbody.AddForce (Vector3.up * impulse_force, ForceMode.Impulse);
@@ -77,8 +71,6 @@ public class InputController : MonoBehaviour {
 								SetHighlight (Color.red);
 						}
 				}
-
-
 
 				if (Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ()) || Input.GetKeyUp (rollkey.ToLower ())) {
 						SetHighlight (onGround ? Color.yellow : Color.white);
@@ -123,24 +115,5 @@ public class InputController : MonoBehaviour {
 		}
 		return myCorner;
 	}
-
-/*	Vector3 calcTorqueVector(Vector3 mypoint, Vector3[] vertices) {
-		float[] ypos = new float[4];
-		for (int i=0; i<vertices.Length; i++) {
-						ypos [i] = vertices.y + Transform.y;
-				}
-
-		for (int i =0; i< allKitties.Length; i++) {
-			base[i] = getBase(allKitties[i].transform.position, vertices);
-		}
-
-			Vector3[] groundcorners = new Vector3[2];
-			int index = 0;
-			for (int i=0; i<vertices.Length; i++) {
-				if ((!vertices[i].y-mypoint.y <= 0,01)) {
-					Debug.Log("y: " + groundcorners.y);
-				}
-			}
-			return mypoint;
-		}*/
+	
 }

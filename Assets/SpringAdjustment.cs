@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpringAdjustment : MonoBehaviour {
 
-	public int damp = 100;
+	public int damp = 1000;
 	public int springy = 500;
 
 	// Use this for initialization
@@ -18,6 +18,20 @@ public class SpringAdjustment : MonoBehaviour {
 		}
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.GetKeyDown (KeyCode.DownArrow)) {
+						springy -= 10;
+				}
+		if (Input.GetKeyDown (KeyCode.UpArrow)) {
+						springy += 10;
+				}
+		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+						damp -= 10;
+				}
+		if (Input.GetKeyDown (KeyCode.RightArrow)) {
+			damp+=10;
+				}
+
 
 			SpringJoint[] springs = FindObjectsOfType(typeof(SpringJoint)) as SpringJoint[];
 			foreach (SpringJoint s in springs) {
