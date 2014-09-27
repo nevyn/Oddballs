@@ -65,7 +65,6 @@ public class InputController : MonoBehaviour {
 		for (int i = 0; i< allKitties.Length; i++) {
 
 						InputController ic = allKitties [i].GetComponent<InputController> ();
-
 				
 						if (ic.bdown) {
 								simpress += 1;
@@ -124,7 +123,7 @@ public class InputController : MonoBehaviour {
 					SetHighlight (Color.green);
 
 								Vector3 push = ((transform.parent.position - transform.position).normalized+(Vector3.up * upforce ));
-								Debug.Log (push);
+								
 
 								//+ transform.parent.position;
 								rigidbody.AddForce(push * impulse_force, ForceMode.Impulse);
@@ -151,7 +150,7 @@ public class InputController : MonoBehaviour {
 	}
 
 	void OnCollisionStay(Collision col){
-		Debug.Log (col.gameObject.tag);
+
 
 				if (col.gameObject.tag == "Ground") {
 						onGround = true;
