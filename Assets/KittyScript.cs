@@ -5,7 +5,7 @@ public class KittyScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
@@ -17,8 +17,15 @@ public class KittyScript : MonoBehaviour {
 		Debug.Log (other.gameObject.tag);
 		if(other.gameObject.tag.Equals("Collectible")) {
 			GetComponent<AudioSource>().Play();
-			Destroy(other.gameObject);
+
+			GameObject cam = GameObject.Find("Main Camera");
+
+			GUIScript gui = cam.GetComponent<GUIScript>();
+			gui.increment();
 		}
+		
+		Destroy(other.gameObject);
 	}
+
 
 }

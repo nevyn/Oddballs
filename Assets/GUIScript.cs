@@ -2,21 +2,29 @@
 using System.Collections;
 
 public class GUIScript : MonoBehaviour {
-
 	public int score;
 
-	// Use this for initialization
 	void Start () {
 		score = 0;
-
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		guiText.text = score.ToString();
-	
 
-	
+	}
+
+	void OnGUI() {
+		GUILayout.BeginArea (new Rect (20, Screen.height-30, 200, 50));
+		GUILayout.BeginHorizontal ();
+
+		GUILayout.Label ("NOMZ: " + score);
+		GUILayout.EndHorizontal ();
+		GUILayout.EndArea ();
+
+	}
+
+	public void increment() {
+		score ++;
 	}
 }
