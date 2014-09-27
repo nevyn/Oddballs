@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CameraController.cs" />
+     <Compile Include="Assets\GUIScript.cs" />
      <Compile Include="Assets\InputController.cs" />
      <Compile Include="Assets\KittyScript.cs" />
      <Compile Include="Assets\SpringAdjustment.cs" />
