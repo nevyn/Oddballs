@@ -50,9 +50,11 @@
      <Compile Include="Assets\GUIScript.cs" />
      <Compile Include="Assets\InputController.cs" />
      <Compile Include="Assets\KittyScript.cs" />
+     <Compile Include="Assets\MenuInput.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
      <Compile Include="Assets\SpringAdjustment.cs" />
+     <Compile Include="Assets\StartScreenInteraction.cs" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />
      <None Include="Assets\ShaderForge\Readme.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\MaterialPlatform.shader" />
