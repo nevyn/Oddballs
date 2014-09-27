@@ -63,6 +63,7 @@ public class InputController : MonoBehaviour {
 				if (Input.GetButtonDown ("Jump " + key) || Input.GetKeyDown (key.ToLower ())) {
 						if (onGround) {
 								SetHighlight (Color.green);
+
 								Vector3 push = (Vector3.up + transform.parent.localPosition.normalized);
 				Debug.DrawRay (transform.parent.position, push, Color.red);
 				Debug.Log (transform.parent.position);
@@ -70,6 +71,8 @@ public class InputController : MonoBehaviour {
 							//+ transform.parent.position;
 							rigidbody.AddForce(push * impulse_force, ForceMode.Impulse);
 								
+								GetComponent<AudioSource>().Play();
+								rigidbody.AddForce (Vector3.up * impulse_force, ForceMode.Impulse);
 						} else {
 								SetHighlight (Color.red);
 						}
@@ -78,7 +81,7 @@ public class InputController : MonoBehaviour {
 
 
 				if (Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ()) || Input.GetKeyUp (rollkey.ToLower ())) {
-						SetHighlight (Color.white);
+						SetHighlight (onGround ? Color.yellow : Color.white);
 				}
 
 		}
@@ -96,13 +99,13 @@ public class InputController : MonoBehaviour {
 
 				if (col.gameObject.tag == "Ground") {
 						onGround = true;
-			Debug.Log (onGround);
+			SetHighlight (Color.yellow);
 				}
 		}
 	void OnCollisionExit(Collision col){
 				if (col.gameObject.tag == "Ground") {
 						onGround = false;
-			Debug.Log (onGround);
+						SetHighlight (Color.white);
 				}
 					
 		}    

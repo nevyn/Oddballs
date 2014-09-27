@@ -2,7 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/InputController.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets/InputController.cs" Line="78" Column="3" />
+=======
+      <File FileName="Assets/InputController.cs" Line="25" Column="1" />
+      <File FileName="Assets/CameraController.cs" Line="14" Column="67" />
+>>>>>>> FETCH_HEAD
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
