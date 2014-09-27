@@ -148,7 +148,6 @@ public class InputController : MonoBehaviour {
 				if (col.gameObject.tag == "Ground") {
 						onGround = true;
 						GetComponent<Animator>().SetBool("Jumping", false);
-			SetHighlight (Color.yellow);
 				}
 		}
 	void OnCollisionExit(Collision col){
