@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 495caadadf598804384cc0d9d8187ad0
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bush1
+    100002: Bush2
+    100004: Bush3
+    100006: Leaves2
+    100008: Leaves3
+    100010: Leaves4
+    100012: Leaves5
+    100014: Leaves6
+    100016: polySurface100
+    100018: polySurface101
+    100020: polySurface102
+    100022: polySurface103
+    100024: polySurface90
+    100026: polySurface91
+    100028: polySurface92
+    100030: polySurface93
+    100032: polySurface94
+    100034: polySurface95
+    100036: polySurface96
+    100038: polySurface97
+    100040: polySurface98
+    100042: polySurface99
+    100044: transform196
+    100046: transform197
+    100048: transform198
+    100050: transform199
+    100052: transform200
+    100054: transform201
+    100056: transform202
+    100058: transform203
+    100060: transform204
+    100062: transform205
+    100064: transform206
+    100066: transform207
+    100068: transform208
+    100070: transform209
+    100072: transform210
+    100074: transform211
+    100076: transform212
+    100078: transform213
+    100080: transform214
+    100082: transform215
+    100084: transform216
+    100086: //RootNode
+    100088: Tree
+    400000: Bush1
+    400002: Bush2
+    400004: Bush3
+    400006: Leaves2
+    400008: Leaves3
+    400010: Leaves4
+    400012: Leaves5
+    400014: Leaves6
+    400016: polySurface100
+    400018: polySurface101
+    400020: polySurface102
+    400022: polySurface103
+    400024: polySurface90
+    400026: polySurface91
+    400028: polySurface92
+    400030: polySurface93
+    400032: polySurface94
+    400034: polySurface95
+    400036: polySurface96
+    400038: polySurface97
+    400040: polySurface98
+    400042: polySurface99
+    400044: transform196
+    400046: transform197
+    400048: transform198
+    400050: transform199
+    400052: transform200
+    400054: transform201
+    400056: transform202
+    400058: transform203
+    400060: transform204
+    400062: transform205
+    400064: transform206
+    400066: transform207
+    400068: transform208
+    400070: transform209
+    400072: transform210
+    400074: transform211
+    400076: transform212
+    400078: transform213
+    400080: transform214
+    400082: transform215
+    400084: transform216
+    400086: Tree
+    400088: //RootNode
+    2300000: polySurface103
+    2300002: Tree
+    3300000: polySurface103
+    3300002: Tree
+    4300000: polySurface103
+    4300002: Tree
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bush1
+        weight: 1
+      - path: Bush1/transform202
+        weight: 1
+      - path: Bush2
+        weight: 1
+      - path: Bush2/transform196
+        weight: 1
+      - path: Bush3
+        weight: 1
+      - path: Bush3/polySurface90
+        weight: 1
+      - path: Bush3/polySurface90/transform216
+        weight: 1
+      - path: Bush3/polySurface91
+        weight: 1
+      - path: Bush3/polySurface91/transform215
+        weight: 1
+      - path: Bush3/polySurface92
+        weight: 1
+      - path: Bush3/polySurface92/transform214
+        weight: 1
+      - path: Bush3/polySurface93
+        weight: 1
+      - path: Bush3/polySurface93/transform213
+        weight: 1
+      - path: Bush3/polySurface94
+        weight: 1
+      - path: Bush3/polySurface94/transform212
+        weight: 1
+      - path: Bush3/polySurface95
+        weight: 1
+      - path: Bush3/polySurface95/transform211
+        weight: 1
+      - path: Bush3/polySurface96
+        weight: 1
+      - path: Bush3/polySurface96/transform210
+        weight: 1
+      - path: Bush3/polySurface97
+        weight: 1
+      - path: Bush3/polySurface97/transform209
+        weight: 1
+      - path: Bush3/polySurface98
+        weight: 1
+      - path: Bush3/polySurface98/transform208
+        weight: 1
+      - path: Bush3/polySurface99
+        weight: 1
+      - path: Bush3/polySurface99/transform207
+        weight: 1
+      - path: Bush3/polySurface100
+        weight: 1
+      - path: Bush3/polySurface100/transform206
+        weight: 1
+      - path: Bush3/polySurface101
+        weight: 1
+      - path: Bush3/polySurface101/transform205
+        weight: 1
+      - path: Bush3/polySurface102
+        weight: 1
+      - path: Bush3/polySurface102/transform204
+        weight: 1
+      - path: Bush3/polySurface103
+        weight: 1
+      - path: Bush3/transform203
+        weight: 1
+      - path: Leaves2
+        weight: 1
+      - path: Leaves2/transform197
+        weight: 1
+      - path: Leaves3
+        weight: 1
+      - path: Leaves3/transform201
+        weight: 1
+      - path: Leaves4
+        weight: 1
+      - path: Leaves4/transform200
+        weight: 1
+      - path: Leaves5
+        weight: 1
+      - path: Leaves5/transform199
+        weight: 1
+      - path: Leaves6
+        weight: 1
+      - path: Leaves6/transform198
+        weight: 1
+      - path: Tree
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
