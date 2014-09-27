@@ -14,6 +14,7 @@ public class InputController : MonoBehaviour {
 
 	public bool onGround = false;
 	public bool bdown = false;
+	public bool canfly = true;
 
 	private Vector3 myCorner;
 	private int[][] mySides;
@@ -59,37 +60,70 @@ public class InputController : MonoBehaviour {
 	
 		int numtouching = 0;
 		int simpress = 0;
-			for (int i = 0; i< allKitties.Length; i++) {
+		int flypress = 0;
 
-			InputController ic = allKitties[i].GetComponent<InputController>();
+		for (int i = 0; i< allKitties.Length; i++) {
 
-						if (ic.onGround) {
-								numtouching += 1;
-				Debug.Log ("all touching");
-
-				if (ic.bdown) {
-								simpress+=1;
-					Debug.Log ("all touching && pressing");
-
-				}
-				}
+						InputController ic = allKitties [i].GetComponent<InputController> ();
 				
-				}
+						if (ic.bdown) {
+								simpress += 1;
+								Debug.Log (simpress + " touching ground && pressing");
 
+								if (ic.onGround) {
+										numtouching += 1;
+										Debug.Log (numtouching + " touching ground");
+										canfly=true;
+								} else {
+										flypress += 1;
+										Debug.Log (flypress + " flying && pressing");
+								}
+
+						}
+
+				}	
 	
+		if (Input.GetKeyDown(KeyCode.Space)){
+			Debug.Log ("SPACE");
+
+			simpress=3;
+
+		}
+
 		if (Input.GetButtonDown ("Jump " + key) || Input.GetKeyDown (key.ToLower ())) {
 
 			bdown = true;
 
-			if ( simpress == 3) {
-				rigidbody.AddForce (Vector3.up * impulse_force*50, ForceMode.Impulse);
+
+			if ( simpress ==  3 ) {
+
+				GameObject cam = GameObject.Find("Main Camera");
+				Vector3 fwd=cam.transform.forward;
+
+				canfly=true;
+
+				rigidbody.AddForce ((Vector3.up*impulse_force*0.8f)+fwd*impulse_force*0.2f, ForceMode.Impulse);
+	
+				Debug.Log ("actually big jump");
+				Debug.DrawRay(transform.parent.position, fwd, Color.green);
+
+			} else if (flypress == 3 && canfly) {
+				GameObject cam = GameObject.Find("Main Camera");
+				Vector3 fwd=cam.transform.forward;
+				
+				canfly=false;
+				
+				rigidbody.AddForce ((Vector3.up*impulse_force*0.8f)+fwd*impulse_force*0.2f, ForceMode.Impulse);
+				
+				Debug.Log ("actually big jump");
+				Debug.DrawRay(transform.parent.position, fwd, Color.grey);
 			}
 
 			else if (onGround) {
 					SetHighlight (Color.green);
 
 								Vector3 push = ((transform.parent.position - transform.position).normalized+(Vector3.up * upforce ));
-								Debug.Log (push);
+								
 
 								//+ transform.parent.position;
 								rigidbody.AddForce(push * impulse_force, ForceMode.Impulse);
@@ -100,7 +134,7 @@ public class InputController : MonoBehaviour {
 						}
 				}
 
-				if (Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ()) || Input.GetKeyUp (rollkey.ToLower ())) {
+		if (Input.GetButtonUp ("Jump " + key) || Input.GetKeyUp (key.ToLower ()) || Input.GetKeyUp (rollkey.ToLower ())) {
 						SetHighlight (onGround ? Color.yellow : Color.white);
 						bdown = false;
 				}
@@ -116,7 +150,7 @@ public class InputController : MonoBehaviour {
 	}
 
 	void OnCollisionStay(Collision col){
-		Debug.Log (col.gameObject.tag);
+
 
 				if (col.gameObject.tag == "Ground") {
 						onGround = true;
